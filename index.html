@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yozora · Anime Streaming</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a9 9 0 1 0 9 10 7 7 0 0 1-9-10Z" fill="#0a0812"/></svg>
+    </span>
+    Yozora
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="#trending">Trending</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="admin.html">Admin</a>
+  </div>
+  <div class="nav-right">
+    <label class="search-pill">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Search anime…" aria-label="Search anime">
+    </label>
+    <button class="btn-icon" title="Notifications" aria-label="Notifications">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    </button>
+    <button class="btn btn-primary btn-sm">Sign in</button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow-tag"><span class="dot"></span>New episode drops every Friday</div>
+      <h1 class="hero-title">Your next obsession <span class="script">is streaming tonight.</span></h1>
+      <p class="hero-sub">Yozora curates the sharpest ongoing series and timeless classics — no filler, no fuss, just the next episode when you need it.</p>
+      <div class="hero-actions">
+        <a href="#trending" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Start watching
+        </a>
+        <a href="#catalogue" class="btn btn-ghost">Browse catalogue</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>1,240+</b><span>Series &amp; movies</span></div>
+        <div class="hero-stat"><b>48k</b><span>Episodes streamed daily</span></div>
+        <div class="hero-stat"><b>4.8★</b><span>Average viewer rating</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="poster-stack">
+        <div class="poster-card poster-1">
+          <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=500&auto=format&fit=crop" alt="Crimson Ronin poster">
+          <div class="p-info"><b>Crimson Ronin</b><span>Action · Samurai</span></div>
+        </div>
+        <div class="poster-card poster-2">
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=500&auto=format&fit=crop" alt="Neon Requiem poster">
+          <div class="p-info"><b>Neon Requiem</b><span>Cyberpunk · Thriller</span></div>
+        </div>
+        <div class="poster-card poster-3">
+          <img src="https://images.unsplash.com/photo-1536566482680-fca31930a0bd?q=80&w=500&auto=format&fit=crop" alt="Void Mechanica poster">
+          <div class="p-info"><b>Void Mechanica</b><span>Mecha · Sci-Fi</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section" id="trending">
+    <div class="section-head">
+      <div>
+        <h2>Trending this week</h2>
+        <p>Ranked by what viewers are actually finishing.</p>
+      </div>
+      <a href="#catalogue" class="see-all">See all →</a>
+    </div>
+    <div class="card-grid" id="trendingGrid"></div>
+  </section>
+
+  <section class="section" id="catalogue">
+    <div class="section-head">
+      <div>
+        <h2>Full catalogue</h2>
+        <p id="resultCount">Showing every series in the library.</p>
+      </div>
+    </div>
+    <div class="genre-row" id="genreRow"></div>
+    <div class="card-grid" id="catalogueGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a9 9 0 1 0 9 10 7 7 0 0 1-9-10Z" fill="#0a0812"/></svg></span>
+          Yozora
+        </div>
+        <p style="color:var(--mist-500);font-size:13.5px;max-width:280px;">A fan-made demo streaming interface. Catalogue entries and footage used here are original placeholders, not real releases.</p>
+      </div>
+      <div><h4>Browse</h4><ul><li><a href="#trending">Trending</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="admin.html">Admin panel</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="#">Sign in</a></li><li><a href="#">Watchlist</a></li><li><a href="#">Settings</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="#">Help centre</a></li><li><a href="#">Report an issue</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Yozora. Demo project — not affiliated with any studio.</span>
+      <span>Built with HTML, CSS &amp; JS</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
